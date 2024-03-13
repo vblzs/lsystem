@@ -1,0 +1,13 @@
+import turtle
+
+axiom = "F"  
+def generateSentence(n):
+    global axiom  #a függvény saját hatóköre miatt kell
+    for i in range(0, int(n)):    
+        new = axiom.replace("F", "F+F-F-F+F") 
+        print(str(i) + ". iteráció: " + new)
+        axiom = new
+    return new
+
+n = input("Adja meg az iterációk számát: ")
+generateSentence(n)
